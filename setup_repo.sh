@@ -35,13 +35,13 @@ fi
 
 
 # Check if the repository already exists on GitHub for Yorften
-gh repo view $username/$repo_name > /dev/null 2>&1
+gh repo view $username/$name > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     # If it doesn't exist, create it
-    gh repo create $username/$repo_name --public --gitignore=Java
+    gh repo create $username/$name --public --gitignore=Java
 else
     # If it exists, exit program
-    echo "GitHub repository '$username/$repo_name' already exists. Please provide another name."
+    echo "GitHub repository '$username/$name' already exists. Please provide another name."
     exit 1
 fi
 
